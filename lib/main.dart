@@ -18,6 +18,17 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  final List<String> _images = [
+    'https://via.placeholder.com/400x600',
+    'https://via.placeholder.com/400x600',
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/400x600',
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/600x400',
+    'https://via.placeholder.com/400x600',
+  ];
+
   MyHomePage({Key? key}) : super(key: key);
 
   @override
@@ -27,84 +38,26 @@ class MyHomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
+            child: Row(
               children: [
-                Row(
-                  children: [
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/400x600',
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/400x600',
-                      ),
-                    ),
-                  ],
+                Expanded(
+                  child: Wrap(
+                    runSpacing: 8,
+                    children: _images
+                        .where((element) => _images.indexOf(element) % 2 == 0)
+                        .map((url) => Image.network(url))
+                        .toList(),
+                  ),
                 ),
-                SizedBox(
-                  height: 8,
-                ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/600x400',
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/600x400',
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/400x600',
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/600x400',
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/600x400',
-                      ),
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Flexible(
-                      child: Image.network(
-                        'https://via.placeholder.com/400x600',
-                      ),
-                    ),
-                  ],
+                SizedBox(width: 8),
+                Expanded(
+                  child: Wrap(
+                    runSpacing: 8,
+                    children: _images
+                        .where((element) => _images.indexOf(element) % 2 == 1)
+                        .map((url) => Image.network(url))
+                        .toList(),
+                  ),
                 ),
               ],
             ),

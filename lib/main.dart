@@ -18,15 +18,23 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final List<String> _images = [
-    'https://via.placeholder.com/400x600',
-    'https://via.placeholder.com/400x600',
-    'https://via.placeholder.com/600x400',
-    'https://via.placeholder.com/600x400',
-    'https://via.placeholder.com/400x600',
-    'https://via.placeholder.com/600x400',
-    'https://via.placeholder.com/600x400',
-    'https://via.placeholder.com/400x600',
+  final List<Image> _images = [
+    Image.network('https://via.placeholder.com/400x600',
+        key: ValueKey('image1')),
+    Image.network('https://via.placeholder.com/400x600',
+        key: ValueKey('image2')),
+    Image.network('https://via.placeholder.com/600x400',
+        key: ValueKey('image3')),
+    Image.network('https://via.placeholder.com/600x400',
+        key: ValueKey('image4')),
+    Image.network('https://via.placeholder.com/400x600',
+        key: ValueKey('image5')),
+    Image.network('https://via.placeholder.com/600x400',
+        key: ValueKey('image6')),
+    Image.network('https://via.placeholder.com/600x400',
+        key: ValueKey('image7')),
+    Image.network('https://via.placeholder.com/400x600',
+        key: ValueKey('image8')),
   ];
 
   MyHomePage({Key? key}) : super(key: key);
@@ -45,7 +53,6 @@ class MyHomePage extends StatelessWidget {
                     runSpacing: 8,
                     children: _images
                         .where((element) => _images.indexOf(element) % 2 == 0)
-                        .map((url) => Image.network(url))
                         .toList(),
                   ),
                 ),
@@ -55,7 +62,6 @@ class MyHomePage extends StatelessWidget {
                     runSpacing: 8,
                     children: _images
                         .where((element) => _images.indexOf(element) % 2 == 1)
-                        .map((url) => Image.network(url))
                         .toList(),
                   ),
                 ),

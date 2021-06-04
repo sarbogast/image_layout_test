@@ -32,14 +32,18 @@ class MyHomePage extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/400x600')),
+                      child: Image.network(
+                        'https://via.placeholder.com/400x600',
+                      ),
+                    ),
                     SizedBox(
                       width: 8,
                     ),
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/400x600')),
+                      child: Image.network(
+                        'https://via.placeholder.com/400x600',
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -48,14 +52,18 @@ class MyHomePage extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/600x400')),
+                      child: Image.network(
+                        'https://via.placeholder.com/600x400',
+                      ),
+                    ),
                     SizedBox(
                       width: 8,
                     ),
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/600x400')),
+                      child: Image.network(
+                        'https://via.placeholder.com/600x400',
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -64,14 +72,18 @@ class MyHomePage extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/400x600')),
+                      child: Image.network(
+                        'https://via.placeholder.com/400x600',
+                      ),
+                    ),
                     SizedBox(
                       width: 8,
                     ),
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/600x400')),
+                      child: Image.network(
+                        'https://via.placeholder.com/600x400',
+                      ),
+                    ),
                   ],
                 ),
                 SizedBox(
@@ -80,14 +92,18 @@ class MyHomePage extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/600x400')),
+                      child: Image.network(
+                        'https://via.placeholder.com/600x400',
+                      ),
+                    ),
                     SizedBox(
                       width: 8,
                     ),
                     Flexible(
-                        child: Image.network(
-                            'https://via.placeholder.com/400x600')),
+                      child: Image.network(
+                        'https://via.placeholder.com/400x600',
+                      ),
+                    ),
                   ],
                 ),
               ],
